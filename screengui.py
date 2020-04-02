@@ -842,8 +842,27 @@ class Ui_MainWindow(object):
         self.lbld17.show()
         self.lbld18.show()
 
-    def Crearnota (self, tiempo, tono):
-
+    def Crearnota (self, duracion , tono):
+        
+        if duracion >= 0 and  duracion < 0.19:
+            tiempo=2
+        elif duracion >= 0.19 and  duracion < 0.32:
+            tiempo=4
+        elif duracion >= 0.32 and  duracion < 0.44:
+            tiempo=6
+        elif duracion >= 0.44 and  duracion < 0.63:
+            tiempo=8
+        elif duracion >= 0.63 and  duracion < 0.86:
+            tiempo=12
+        elif duracion >= 0.86 and  duracion < 1.25:
+            tiempo=16
+        elif duracion >= 1.25 and  duracion < 1.75:
+            tiempo=28
+        elif duracion >= 1.75 and  duracion < 2.5:
+            tiempo=32
+        elif duracion >= 2.5:
+            tiempo=48
+            
         #---------NOTAS NATURALES---------------
         if tono=='A4' or tono=='D4' or tono=='E4' or tono=='F4' or tono=='G4':
             if tiempo==2:
