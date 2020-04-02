@@ -12,13 +12,21 @@ class Souter(QtWidgets.QMainWindow):
         #Funcion click boton iniciar grabacion
         self.ui.btn_grabar.clicked.connect(self.crearnota)
 
+        self.ui.btn_stop.clicked.connect(self.ResetSouter)
+
+    def ResetSouter(self):
+        self.ui.LimpiaLabel()
+        self.ui.posx=1
+        self.ui.cntbtt=0
+        self.ui.btn_grabar.setIcon(QtGui.QIcon("imagenes/grabar.tif"))
+        self.ui.rec.setPixmap(QtGui.QPixmap("imagenes/offline.png"))                
     #funcion prueba
     def crearnota(self):
         
         self.ui.cntbtt+=1 
                
         if self.ui.cntbtt==1:
-            self.ui.btn_grabar.setIcon(QtGui.QIcon("imagenes/stop.tif"))
+            self.ui.btn_grabar.setIcon(QtGui.QIcon("imagenes/pause.tif"))
             self.ui.rec.setPixmap(QtGui.QPixmap("imagenes/online.png"))
             self.ui.Crearnota(1,'D5') 
             self.ui.Crearnota(0.5,'B5') 
@@ -39,7 +47,7 @@ class Souter(QtWidgets.QMainWindow):
             self.ui.cntbtt=0
             self.ui.btn_grabar.setIcon(QtGui.QIcon("imagenes/grabar.tif"))
             self.ui.rec.setPixmap(QtGui.QPixmap("imagenes/offline.png"))
-            self.ui.LimpiaLabel()
+            
 
 
 if __name__ == "__main__":

@@ -41,6 +41,13 @@ class Ui_MainWindow(object):
         self.barrainf.setPixmap(QtGui.QPixmap("imagenes/barra.png"))
         self.barrainf.setScaledContents(True)
         self.barrainf.setObjectName("barrainf")
+
+        # Imagen de BARRA DE OPCIONES DERECHA inferior de Souter
+        self.barrainfder = QtWidgets.QLabel(self.centralwidget)
+        self.barrainfder.setGeometry(QtCore.QRect(721, 493, 349, 58))
+        self.barrainfder.setPixmap(QtGui.QPixmap("imagenes/barrader.png"))
+        self.barrainfder.setScaledContents(True)
+        self.barrainfder.setObjectName("barrainf")
         
          # Imagen de PLAY inferior de Souter
         self.botonplay = QtWidgets.QLabel(self.centralwidget)
@@ -55,9 +62,16 @@ class Ui_MainWindow(object):
         self.btn_grabar.setGeometry(QtCore.QRect(89, 498, 84, 84))
         self.btn_grabar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))  
 
+         # Boton para reiniciar la escritura
+        self.btn_stop=QtWidgets.QPushButton(MainWindow)
+        self.btn_stop.setIcon(QtGui.QIcon("imagenes/stop.tif"))
+        self.btn_stop.setIconSize(QtCore.QSize(140,43))
+        self.btn_stop.setGeometry(QtCore.QRect(191, 521, 140, 43))
+        self.btn_stop.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))  
+
          # Imagen de aviso de grabacion activa
         self.rec = QtWidgets.QLabel(self.centralwidget)
-        self.rec.setGeometry(QtCore.QRect(202, 503, 127, 38))
+        self.rec.setGeometry(QtCore.QRect(752, 503, 127, 38))
         self.rec.setPixmap(QtGui.QPixmap("imagenes/offline.png"))
         self.rec.setScaledContents(True)
 
