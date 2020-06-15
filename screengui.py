@@ -1,5 +1,6 @@
-#-------SOUTER 0322-------
+#-------SOUTER 0403-------
 #---CODIGO BASE DE GUI SOUTER (Hijo)---
+#funciona al pelo
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
@@ -876,6 +877,7 @@ class Ui_MainWindow(object):
             tiempo=32
         elif duracion >= 2.5:
             tiempo=48
+            
             
         #---------NOTAS NATURALES---------------
         if tono=='A4' or tono=='D4' or tono=='E4' or tono=='F4' or tono=='G4':
